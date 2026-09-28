@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.task.TaskModuleIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-09-27T23:22:25.668Z" hostname="<host>" time="0.041">
+  <properties/>
+  <testcase name="initializationError" classname="com.example.taskmaster.task.TaskModuleIntegrationTest" time="0.001">
+    <failure message="org.springframework.modulith.core.Violations: - Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!&#10;Constructor &lt;com.example.taskmaster.notification.NotificationListener.&lt;init&gt;()&gt; calls constructor &lt;com.example.taskmaster.task.internal.TaskValidator.&lt;init&gt;()&gt; in (NotificationListener.java:12)&#10;- Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!&#10;Field &lt;com.example.taskmaster.notification.NotificationListener.validator&gt; has type &lt;com.example.taskmaster.task.internal.TaskValidator&gt; in (NotificationListener.java:0)" type="org.springframework.modulith.core.Violations">org.springframework.modulith.core.Violations: - Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!
+Constructor &lt;com.example.taskmaster.notification.NotificationListener.&lt;init&gt;()&gt; calls constructor &lt;com.example.taskmaster.task.internal.TaskValidator.&lt;init&gt;()&gt; in (NotificationListener.java:12)
+- Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!
+Field &lt;com.example.taskmaster.notification.NotificationListener.validator&gt; has type &lt;com.example.taskmaster.task.internal.TaskValidator&gt; in (NotificationListener.java:0)
+	at org.springframework.modulith.core.Violations.and(Violations.java:141)
+	at org.springframework.modulith.core.ApplicationModules.detectViolations(ApplicationModules.java:497)
+	at org.springframework.modulith.core.ApplicationModules.verify(ApplicationModules.java:451)
+	at org.springframework.modulith.core.ApplicationModules.verify(ApplicationModules.java:435)
+	at org.springframework.modulith.test.ModuleTestExecution.verify(ModuleTestExecution.java:186)
+	at org.springframework.modulith.test.ModuleTestExecution.&lt;init&gt;(ModuleTestExecution.java:119)
+	at org.springframework.modulith.test.ModuleTestExecution.lambda$of$6(ModuleTestExecution.java:149)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1724)
+	at org.springframework.modulith.test.ModuleTestExecution.lambda$of$7(ModuleTestExecution.java:148)
+	at org.springframework.util.function.SingletonSupplier.get(SingletonSupplier.java:113)
+	at org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer.hashCode(ModuleContextCustomizerFactory.java:191)
+	at java.base/java.util.HashMap.hash(HashMap.java:338)
+	at java.base/java.util.HashMap.put(HashMap.java:619)
+	at java.base/java.util.HashSet.add(HashSet.java:230)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.getContextCustomizers(AbstractTestContextBootstrapper.java:422)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:393)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:268)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:226)
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildTestContext(AbstractTestContextBootstrapper.java:117)
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.buildTestContext(SpringBootTestContextBootstrapper.java:102)
+	at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:142)
+	at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:126)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getTestContextManager(SpringExtension.java:466)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:240)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:214)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+</failure>
+  </testcase>
+  <system-out><![CDATA[08:22:25.679 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.task.TaskModuleIntegrationTest]: TaskModuleIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

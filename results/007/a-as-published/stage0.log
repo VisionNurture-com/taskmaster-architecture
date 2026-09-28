@@ -1,0 +1,64 @@
+> Task :clean UP-TO-DATE
+
+> Task :compileJava FAILED
+<work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:4: error: class TaskCompletedEvent is public, should be declared in a file named TaskCompletedEvent.java
+public record TaskCompletedEvent(Long taskId, String title) {}
+       ^
+<work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:6: error: cannot find symbol
+@Service
+ ^
+  symbol: class Service
+<work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:10: error: cannot find symbol
+    private final ApplicationEventPublisher events;
+                  ^
+  symbol:   class ApplicationEventPublisher
+  location: class TaskService
+<work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:13: error: cannot find symbol
+                       ApplicationEventPublisher events) {
+                       ^
+  symbol:   class ApplicationEventPublisher
+  location: class TaskService
+<work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:18: error: cannot find symbol
+    @Transactional
+     ^
+  symbol:   class Transactional
+  location: class TaskService
+5 errors
+
+[Incubating] Problems report is available at: file://<work>/modulith/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  <work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:4: error: class TaskCompletedEvent is public, should be declared in a file named TaskCompletedEvent.java
+  public record TaskCompletedEvent(Long taskId, String title) {}
+         ^
+  <work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:6: error: cannot find symbol
+  @Service
+   ^
+    symbol: class Service
+  <work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:10: error: cannot find symbol
+      private final ApplicationEventPublisher events;
+                    ^
+    symbol:   class ApplicationEventPublisher
+    location: class TaskService
+  <work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:13: error: cannot find symbol
+                         ApplicationEventPublisher events) {
+                         ^
+    symbol:   class ApplicationEventPublisher
+    location: class TaskService
+  <work>/modulith/src/main/java/com/example/taskmaster/task/TaskService.java:18: error: cannot find symbol
+      @Transactional
+       ^
+    symbol:   class Transactional
+    location: class TaskService
+  5 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 656ms
+2 actionable tasks: 1 executed, 1 up-to-date

@@ -1,0 +1,48 @@
+base: rc=0 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=0 errors=0
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+0
+p2-debug: rc=0 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=0 errors=0
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+0
+p3: rc=1 tests=0
+  error: cannot find symbol
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+p4: rc=1 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=1 errors=0
+    <failure message="org.springframework.modulith.core.Violations: - Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!&#10;Constructor &lt;com.example.taskmaster.notification.NotificationListener.&lt;init&gt;()&gt; calls constructor &lt;com.example.taskmaster.task.internal.TaskValidator.&lt;init&gt;()&gt; in (NotificationListene
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=0 errors=0
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=5
+p4-detect: rc=1 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=1 errors=0
+    <failure message="org.springframework.modulith.core.Violations: - Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!&#10;Constructor &lt;com.example.taskmaster.notification.NotificationListener.&lt;init&gt;()&gt; calls constructor &lt;com.example.taskmaster.task.internal.TaskValidator.&lt;init&gt;()&gt; in (NotificationListene
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+0
+p4-staged: rc=0 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=0 errors=0
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+0
+p5: rc=1 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=1 errors=0
+    <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@4af6839c testClass = com.example.taskmaster.task.TaskModuleIntegrationTest, locations = [], classes = [com.example.taskmaster.TaskmasterApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springfram
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+0
+p9: rc=0 tests=2
+  com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+  com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=0 errors=0
+  verifyingModules=0 hasNoDependencies=0
+  modulithLogLines=0
+0

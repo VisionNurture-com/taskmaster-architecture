@@ -43,3 +43,5 @@ jobs:
       - uses: gradle/actions/setup-gradle@v6
       - name: テストを実行する
         run: ./gradlew test --console=plain
+      - name: Spring Modulith のサンプル（modulith/）のテストを実行する
+        run: ./gradlew -p modulith test --console=plain

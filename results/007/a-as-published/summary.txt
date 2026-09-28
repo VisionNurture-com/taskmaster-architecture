@@ -1,0 +1,15 @@
+stage0: rc=1 tests=0
+  compileErrors=10
+       8 error: cannot find symbol
+       2 error: class TaskCompletedEvent is public, should be declared in a file named TaskCompletedEvent.java
+  verifyingModulesLines=0 hasNoDependenciesLines=0
+stage1: rc=1 tests=0
+  compileErrors=2
+       2 error: cannot find symbol
+  verifyingModulesLines=0 hasNoDependenciesLines=0
+stage2: rc=1 tests=2
+  compileErrors=0
+    com.example.taskmaster.ModularityTests tests=1 failures=0 errors=0
+    com.example.taskmaster.task.TaskModuleIntegrationTest tests=1 failures=1 errors=0
+      message="com.example.taskmaster.task.TaskNotFoundException: Task not found: id=1"
+  verifyingModulesLines=0 hasNoDependenciesLines=0

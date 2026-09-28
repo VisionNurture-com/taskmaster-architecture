@@ -26,6 +26,16 @@ Gradle マルチプロジェクトで、ドメイン層・アプリケーショ�
 
 Spring Boot の Docker Compose 連携が、ルートの `compose.yaml` から PostgreSQL を起動します。
 
+## Spring Modulith のサンプル（`modulith/`）
+
+`modulith/` は、オニオンの taskmaster とは別の独立したビルドです。task / notification / report の 3 つのモジュールで、Spring Modulith の依存の検証とモジュール間のイベントを試せます。
+
+```bash
+./gradlew -p modulith test
+```
+
+テストは Testcontainers で PostgreSQL のコンテナを起動するため、Docker が要ります。
+
 ## 測定結果
 
 `results/` に記事で使う測定の生ログを置いています。

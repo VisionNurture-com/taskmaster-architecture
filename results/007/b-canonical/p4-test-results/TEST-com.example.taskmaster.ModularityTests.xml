@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.ModularityTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-09-27T23:22:20.189Z" hostname="<host>" time="0.481">
+  <properties/>
+  <testcase name="verifyModularStructure()" classname="com.example.taskmaster.ModularityTests" time="0.477">
+    <failure message="org.springframework.modulith.core.Violations: - Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!&#10;Constructor &lt;com.example.taskmaster.notification.NotificationListener.&lt;init&gt;()&gt; calls constructor &lt;com.example.taskmaster.task.internal.TaskValidator.&lt;init&gt;()&gt; in (NotificationListener.java:12)&#10;- Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!&#10;Field &lt;com.example.taskmaster.notification.NotificationListener.validator&gt; has type &lt;com.example.taskmaster.task.internal.TaskValidator&gt; in (NotificationListener.java:0)" type="org.springframework.modulith.core.Violations">org.springframework.modulith.core.Violations: - Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!
+Constructor &lt;com.example.taskmaster.notification.NotificationListener.&lt;init&gt;()&gt; calls constructor &lt;com.example.taskmaster.task.internal.TaskValidator.&lt;init&gt;()&gt; in (NotificationListener.java:12)
+- Module 'notification' depends on non-exposed type com.example.taskmaster.task.internal.TaskValidator within module 'task'!
+Field &lt;com.example.taskmaster.notification.NotificationListener.validator&gt; has type &lt;com.example.taskmaster.task.internal.TaskValidator&gt; in (NotificationListener.java:0)
+	at org.springframework.modulith.core.Violations.and(Violations.java:141)
+	at org.springframework.modulith.core.ApplicationModules.detectViolations(ApplicationModules.java:497)
+	at org.springframework.modulith.core.ApplicationModules.verify(ApplicationModules.java:451)
+	at org.springframework.modulith.core.ApplicationModules.verify(ApplicationModules.java:435)
+	at com.example.taskmaster.ModularityTests.verifyModularStructure(ModularityTests.java:11)
+</failure>
+  </testcase>
+  <system-out><![CDATA[08:22:20.305 [Test worker] INFO com.tngtech.archunit.core.PluginLoader -- Detected Java version 25.0.4
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

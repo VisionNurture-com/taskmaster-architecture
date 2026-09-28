@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.task.TaskModuleIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-27T23:22:14.746Z" hostname="<host>" time="2.836">
+  <properties/>
+  <testcase name="completingTaskPublishesEvent(Scenario)" classname="com.example.taskmaster.task.TaskModuleIntegrationTest" time="0.422"/>
+  <system-out><![CDATA[INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.taskmaster.task.TaskModuleIntegrationTest]: TaskModuleIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.task.TaskModuleIntegrationTest
+INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.taskmaster.task.TaskModuleIntegrationTest]: TaskModuleIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.task.TaskModuleIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - Bootstrapping @org.springframework.modulith.test.ApplicationModuleTest for Task in mode STANDALONE (class com.example.taskmaster.TaskmasterApplication)…
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - 
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - # Task
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - > Logical name: task
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - > Base package: com.example.taskmaster.task
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - > Excluded packages: none
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - > Direct module dependencies: none
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - > Spring beans:
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer -   + ….TaskRepository
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer -   + ….TaskService
+INFO org.springframework.modulith.test.ModuleContextCustomizerFactory$ModuleContextCustomizer - 
+INFO com.example.taskmaster.task.TaskModuleIntegrationTest - Starting TaskModuleIntegrationTest using Java 25.0.4 with PID 46314 (started by <user> in <work>/modulith)
+INFO com.example.taskmaster.task.TaskModuleIntegrationTest - No active profile set, falling back to 1 default profile: "default"
+INFO org.springframework.modulith.test.ModuleTestAutoConfiguration$AutoConfigurationAndEntityScanPackageCustomizer - Re-configuring auto-configuration and entity scan packages to: com.example.taskmaster.task.
+INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+INFO org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+INFO org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+INFO org.testcontainers.images.PullPolicy - Image pull policy will be performed by: DefaultPullPolicy()
+INFO org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+INFO org.testcontainers.DockerClientFactory - Testcontainers version: 2.0.5
+INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+INFO org.testcontainers.DockerClientFactory - Docker host IP address is localhost
+INFO org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop
+  Total Memory: 7933 MB
+  Labels: 
+    com.docker.desktop.address=unix://~/Library/Containers/com.docker.docker/Data/docker-cli.sock
+INFO tc.testcontainers/ryuk:0.14.0 - Creating container for image: testcontainers/ryuk:0.14.0
+INFO tc.testcontainers/ryuk:0.14.0 - Container testcontainers/ryuk:0.14.0 is starting: b5187af4f727f3278aaf6666e997a135c01f56e56913f2bd223ad08847d862c2
+INFO tc.testcontainers/ryuk:0.14.0 - Container testcontainers/ryuk:0.14.0 started in PT0.242817S
+INFO org.testcontainers.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+INFO org.testcontainers.DockerClientFactory - Checking the system...
+INFO org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+INFO tc.postgres:17-alpine - Creating container for image: postgres:17-alpine
+INFO tc.postgres:17-alpine - Container postgres:17-alpine is starting: 8443eca4dd0ba1724d95a860e5ac8ad890d34cd3674d9cbbc246615198c37b4b
+INFO tc.postgres:17-alpine - Container postgres:17-alpine started in PT0.733633S
+INFO tc.postgres:17-alpine - Container is started (JDBC URL: jdbc:postgresql://localhost:51060/taskmaster?loggerLevel=OFF)
+INFO com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@9e7d82e
+INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+INFO org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:51060/taskmaster?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: taskmaster/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+INFO org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+INFO org.springframework.scheduling.config.TaskSchedulerRouter - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+INFO com.example.taskmaster.task.TaskModuleIntegrationTest - Started TaskModuleIntegrationTest in 2.345 seconds (process running for 3.206)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (~/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.18.11/82212e5b3633e7a65fca8bec525762cfb6c9bae4/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

@@ -1,7 +1,8 @@
-// task モジュール: イベント定義 + 発行
 package com.example.taskmaster.task;
 
-public record TaskCompletedEvent(Long taskId, String title) {}
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class TaskService {
