@@ -1,0 +1,25 @@
+
+> Task :domain:compileJava FAILED
+<work>/domain/src/main/java/com/example/taskmaster/domain/Task.java:2: error: package org.springframework.stereotype does not exist
+import org.springframework.stereotype.Component;
+                                     ^
+1 error
+
+[Incubating] Problems report is available at: file://<work>/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':domain:compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  <work>/domain/src/main/java/com/example/taskmaster/domain/Task.java:2: error: package org.springframework.stereotype does not exist
+  import org.springframework.stereotype.Component;
+                                       ^
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 479ms
+1 actionable task: 1 executed

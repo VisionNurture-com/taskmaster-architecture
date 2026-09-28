@@ -1,0 +1,6 @@
+> Task :domain:compileJava
+> Task :application:compileJava
+> Task :presentation:compileJava
+
+BUILD SUCCESSFUL in 451ms
+3 actionable tasks: 3 executed

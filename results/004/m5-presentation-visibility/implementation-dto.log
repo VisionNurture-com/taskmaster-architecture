@@ -1,0 +1,29 @@
+> Task :domain:compileJava
+> Task :application:compileJava
+
+> Task :presentation:compileJava FAILED
+<work>/presentation/src/main/java/com/example/taskmaster/presentation/TaskView.java:7: error: cannot access TaskStatus
+        return response.title() + " (" + response.status() + ")";
+                                                        ^
+  class file for com.example.taskmaster.domain.TaskStatus not found
+1 error
+
+[Incubating] Problems report is available at: file://<work>/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':presentation:compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  <work>/presentation/src/main/java/com/example/taskmaster/presentation/TaskView.java:7: error: cannot access TaskStatus
+          return response.title() + " (" + response.status() + ")";
+                                                          ^
+    class file for com.example.taskmaster.domain.TaskStatus not found
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 452ms
+3 actionable tasks: 3 executed

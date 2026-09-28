@@ -1,0 +1,10 @@
+
+------------------------------------------------------------
+Project ':presentation'
+------------------------------------------------------------
+
+compileClasspath - Compile classpath for source set 'main'.
+\--- project ':application'
+     \--- project ':domain'
+
+A web-based, searchable dependency report is available by adding the --scan option.

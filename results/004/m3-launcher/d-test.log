@@ -1,0 +1,10 @@
+> Task :domain:compileJava
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:compileTestJava
+> Task :domain:processTestResources NO-SOURCE
+> Task :domain:testClasses
+> Task :domain:test
+
+BUILD SUCCESSFUL in 820ms
+3 actionable tasks: 3 executed

@@ -1,0 +1,21 @@
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :domain:compileJava
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :domain:compileTestJava
+> Task :domain:processTestResources NO-SOURCE
+> Task :domain:testClasses
+> Task :domain:test
+> Task :application:compileJava
+> Task :application:processResources NO-SOURCE
+> Task :application:classes
+> Task :application:compileTestJava
+> Task :application:processTestResources NO-SOURCE
+> Task :application:testClasses
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+> Task :application:test
+
+BUILD SUCCESSFUL in 19s
+7 actionable tasks: 7 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.0/userguide/configuration_cache_enabling.html

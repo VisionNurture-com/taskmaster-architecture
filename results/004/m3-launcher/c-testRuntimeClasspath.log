@@ -1,0 +1,40 @@
+
+------------------------------------------------------------
+Project ':domain'
+------------------------------------------------------------
+
+testRuntimeClasspath - Runtime classpath of source set 'test'.
++--- org.junit.jupiter:junit-jupiter:5.12.2
+|    +--- org.junit:junit-bom:5.12.2 -> 6.0.3
+|    |    +--- org.junit.jupiter:junit-jupiter:6.0.3 -> 5.12.2 (c)
+|    |    +--- org.junit.jupiter:junit-jupiter-api:6.0.3 (c)
+|    |    +--- org.junit.jupiter:junit-jupiter-engine:6.0.3 (c)
+|    |    +--- org.junit.jupiter:junit-jupiter-params:6.0.3 (c)
+|    |    +--- org.junit.platform:junit-platform-commons:6.0.3 (c)
+|    |    +--- org.junit.platform:junit-platform-engine:6.0.3 (c)
+|    |    \--- org.junit.platform:junit-platform-launcher:6.0.3 (c)
+|    +--- org.junit.jupiter:junit-jupiter-api:5.12.2 -> 6.0.3
+|    |    +--- org.junit:junit-bom:6.0.3 (*)
+|    |    +--- org.opentest4j:opentest4j:1.3.0
+|    |    \--- org.junit.platform:junit-platform-commons:6.0.3
+|    |         \--- org.junit:junit-bom:6.0.3 (*)
+|    +--- org.junit.jupiter:junit-jupiter-params:5.12.2 -> 6.0.3
+|    |    +--- org.junit:junit-bom:6.0.3 (*)
+|    |    \--- org.junit.jupiter:junit-jupiter-api:6.0.3 (*)
+|    \--- org.junit.jupiter:junit-jupiter-engine:5.12.2 -> 6.0.3
+|         +--- org.junit:junit-bom:6.0.3 (*)
+|         +--- org.junit.platform:junit-platform-engine:6.0.3
+|         |    +--- org.junit:junit-bom:6.0.3 (*)
+|         |    +--- org.opentest4j:opentest4j:1.3.0
+|         |    \--- org.junit.platform:junit-platform-commons:6.0.3 (*)
+|         \--- org.junit.jupiter:junit-jupiter-api:6.0.3 (*)
++--- org.assertj:assertj-core -> 3.27.7
+|    \--- net.bytebuddy:byte-buddy:1.18.3 -> 1.18.11
+\--- org.junit.platform:junit-platform-launcher -> 6.0.3
+     +--- org.junit:junit-bom:6.0.3 (*)
+     \--- org.junit.platform:junit-platform-engine:6.0.3 (*)
+
+(c) - A dependency constraint, not a dependency. The dependency affected by the constraint occurs elsewhere in the tree.
+(*) - Indicates repeated occurrences of a transitive dependency subtree. Gradle expands transitive dependency subtrees only once per project; repeat occurrences only display the root of the subtree, followed by this annotation.
+
+A web-based, searchable dependency report is available by adding the --scan option.

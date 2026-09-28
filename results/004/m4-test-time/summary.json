@@ -1,0 +1,23 @@
+{
+  "n": 10,
+  "allRc0": true,
+  "testsPerRun": [
+    3
+  ],
+  "median": {
+    "A": {
+      "wall_s": 1.2854999999999999,
+      "junit_s": 0.39
+    },
+    "B": {
+      "wall_s": 1.4055,
+      "junit_s": 0.5085
+    }
+  },
+  "ratioB_over_A": {
+    "wall": 1.09,
+    "junit": 1.3
+  },
+  "fasterByJunit": "A",
+  "fasterByWall": "A"
+}

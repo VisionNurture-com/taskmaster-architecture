@@ -1,0 +1,30 @@
+> Task :domain:compileJava
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:compileTestJava
+> Task :domain:processTestResources NO-SOURCE
+> Task :domain:testClasses
+
+> Task :domain:test FAILED
+
+Gradle Test Executor 8 FAILED
+    org.gradle.api.internal.tasks.testing.TestSuiteExecutionException at SuiteTestDefinitionProcessor.java:45
+        Caused by: org.gradle.api.internal.tasks.testing.RequiresTestFrameworkTestDefinitionProcessor$TestFrameworkNotAvailableException at JUnitPlatformTestDefinitionProcessor.java:101
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':domain:test' (registered by plugin 'org.gradle.jvm-test-suite').
+> Test process encountered an unexpected problem.
+   > Could not start Gradle Test Executor 8.
+      > Failed to load JUnit Platform.  Please ensure that all JUnit Platform dependencies are available on the test's runtime classpath, including the JUnit Platform launcher.
+
+* Try:
+> Check common problems https://docs.gradle.org/9.8.0/userguide/java_testing.html#sec:java_testing_troubleshooting.
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 776ms
+3 actionable tasks: 3 executed

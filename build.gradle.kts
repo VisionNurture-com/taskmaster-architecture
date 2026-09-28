@@ -1,6 +1,6 @@
 plugins {
     `java-library`
-    id("org.springframework.boot") version "4.0.5" apply false
+    id("org.springframework.boot") version "4.1.1" apply false
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -19,7 +19,7 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom("org.springframework.boot:spring-boot-dependencies:4.0.5")
+            mavenBom("org.springframework.boot:spring-boot-dependencies:4.1.1")
         }
     }
 
