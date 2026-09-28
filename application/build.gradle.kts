@@ -1,0 +1,11 @@
+dependencies {
+    api(project(":domain"))
+
+    implementation("org.springframework:spring-context")
+    implementation("org.springframework:spring-tx")
+
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.assertj:assertj-core")
+    testImplementation("org.mockito:mockito-core")
+    testImplementation("org.mockito:mockito-junit-jupiter")
+}

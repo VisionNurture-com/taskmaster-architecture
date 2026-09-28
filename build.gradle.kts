@@ -1,33 +1,35 @@
 plugins {
-    java
-    id("org.springframework.boot") version "4.1.1"
+    `java-library`
+    id("org.springframework.boot") version "4.0.5" apply false
     id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "com.example"
-version = "0.0.1-SNAPSHOT"
+allprojects {
+    group = "com.example"
+    version = "0.0.1-SNAPSHOT"
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+    repositories {
+        mavenCentral()
     }
 }
 
-repositories {
-    mavenCentral()
-}
+subprojects {
+    apply(plugin = "java-library")
+    apply(plugin = "io.spring.dependency-management")
 
-dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-webmvc")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    developmentOnly("org.springframework.boot:spring-boot-docker-compose")
-    runtimeOnly("org.postgresql:postgresql")
+    dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:4.0.5")
+        }
+    }
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-}
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(25)
+        }
+    }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }
