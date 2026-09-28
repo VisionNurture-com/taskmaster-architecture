@@ -34,18 +34,26 @@ public class TaskService {
 
     @Transactional
     public TaskResponse create(TaskRequest request) {
-        Task task = new Task(request.title(), request.description());
+        Task task = new Task(
+                request.title(),
+                request.description(),
+                request.dueDate());
         Task saved = taskRepository.save(task);
         return TaskResponse.from(saved);
     }
 
     @Transactional
     public TaskResponse update(Long id, TaskRequest request) {
-        Task task = taskRepository.findById(id)
+        Task existing = taskRepository.findById(id)
                 .orElseThrow(() -> new TaskNotFoundException(id));
-        task.setTitle(request.title());
-        task.setDescription(request.description());
-        return TaskResponse.from(task);
+        Task task = new Task(
+                id,
+                request.title(),
+                request.description(),
+                request.dueDate(),
+                existing.getStatus());
+        Task saved = taskRepository.save(task);
+        return TaskResponse.from(saved);
     }
 
     @Transactional

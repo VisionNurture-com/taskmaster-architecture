@@ -1,7 +1,7 @@
 package com.example.taskmaster.entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "tasks")
@@ -17,41 +17,65 @@ public class Task {
     @Column(length = 1000)
     private String description;
 
-    @Column(nullable = false)
-    private boolean completed = false;
+    @Column(name = "due_date")
+    private LocalDate dueDate;
 
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private LocalDateTime createdAt;
-
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 20)
+    private TaskStatus status;
 
     protected Task() {}
 
-    public Task(String title, String description) {
+    /** 新規タスク作成用コンストラクタ */
+    public Task(String title, String description, LocalDate dueDate) {
         this.title = title;
         this.description = description;
+        this.dueDate = dueDate;
+        this.status = TaskStatus.TODO;
+        validate();
     }
 
-    @PrePersist
-    void prePersist() {
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = this.createdAt;
+    /** DB復元用コンストラクタ */
+    public Task(Long id, String title, String description,
+                LocalDate dueDate, TaskStatus status) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.status = status;
     }
 
-    @PreUpdate
-    void preUpdate() {
-        this.updatedAt = LocalDateTime.now();
+    public void complete() {
+        if (this.status == TaskStatus.DONE) {
+            throw new IllegalStateException(
+                    "Task is already completed.");
+        }
+        this.status = TaskStatus.DONE;
     }
 
-    // Getter / Setter
+    public void startProgress() {
+        if (this.status != TaskStatus.TODO) {
+            throw new IllegalStateException(
+                    "Only TODO tasks can be started. Current: " + this.status);
+        }
+        this.status = TaskStatus.IN_PROGRESS;
+    }
+
+    public boolean isOverdue() {
+        return this.dueDate != null
+                && this.status != TaskStatus.DONE
+                && LocalDate.now().isAfter(this.dueDate);
+    }
+
+    private void validate() {
+        if (title == null || title.isBlank()) {
+            throw new IllegalArgumentException("Title must not be blank.");
+        }
+    }
+
     public Long getId() { return id; }
     public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
     public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-    public boolean isCompleted() { return completed; }
-    public void setCompleted(boolean completed) { this.completed = completed; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
-    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public LocalDate getDueDate() { return dueDate; }
+    public TaskStatus getStatus() { return status; }
 }

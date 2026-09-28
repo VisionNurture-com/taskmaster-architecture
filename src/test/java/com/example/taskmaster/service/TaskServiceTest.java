@@ -28,8 +28,8 @@ class TaskServiceTest {
     @Test
     @DisplayName("タスクを作成できる")
     void createTask() {
-        var request = new TaskRequest("テスト", "テスト説明");
-        var task = new Task("テスト", "テスト説明");
+        var request = new TaskRequest("テスト", "テスト説明", null);
+        var task = new Task("テスト", "テスト説明", null);
         given(taskRepository.save(any(Task.class))).willReturn(task);
 
         TaskResponse response = taskService.create(request);

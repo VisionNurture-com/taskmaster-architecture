@@ -1,23 +1,23 @@
 package com.example.taskmaster.dto;
 
-import java.time.LocalDateTime;
+import com.example.taskmaster.entity.Task;
+import com.example.taskmaster.entity.TaskStatus;
+import java.time.LocalDate;
 
 public record TaskResponse(
-    Long id,
-    String title,
-    String description,
-    boolean completed,
-    LocalDateTime createdAt,
-    LocalDateTime updatedAt
+        Long id,
+        String title,
+        String description,
+        LocalDate dueDate,
+        TaskStatus status
 ) {
-    public static TaskResponse from(com.example.taskmaster.entity.Task task) {
+    public static TaskResponse from(Task task) {
         return new TaskResponse(
-            task.getId(),
-            task.getTitle(),
-            task.getDescription(),
-            task.isCompleted(),
-            task.getCreatedAt(),
-            task.getUpdatedAt()
+                task.getId(),
+                task.getTitle(),
+                task.getDescription(),
+                task.getDueDate(),
+                task.getStatus()
         );
     }
 }
