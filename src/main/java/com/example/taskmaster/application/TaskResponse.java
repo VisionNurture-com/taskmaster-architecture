@@ -1,7 +1,7 @@
-package com.example.taskmaster.dto;
+package com.example.taskmaster.application;
 
-import com.example.taskmaster.entity.Task;
-import com.example.taskmaster.entity.TaskStatus;
+import com.example.taskmaster.domain.Task;
+import com.example.taskmaster.domain.TaskStatus;
 import java.time.LocalDate;
 
 public record TaskResponse(

@@ -1,8 +1,8 @@
-package com.example.taskmaster.controller;
+package com.example.taskmaster.presentation;
 
-import com.example.taskmaster.dto.TaskRequest;
-import com.example.taskmaster.dto.TaskResponse;
-import com.example.taskmaster.service.TaskService;
+import com.example.taskmaster.application.TaskRequest;
+import com.example.taskmaster.application.TaskResponse;
+import com.example.taskmaster.application.TaskService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

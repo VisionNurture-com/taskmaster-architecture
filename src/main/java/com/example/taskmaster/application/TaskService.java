@@ -1,9 +1,7 @@
-package com.example.taskmaster.service;
+package com.example.taskmaster.application;
 
-import com.example.taskmaster.dto.TaskRequest;
-import com.example.taskmaster.dto.TaskResponse;
-import com.example.taskmaster.entity.Task;
-import com.example.taskmaster.repository.TaskRepository;
+import com.example.taskmaster.domain.Task;
+import com.example.taskmaster.domain.TaskRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

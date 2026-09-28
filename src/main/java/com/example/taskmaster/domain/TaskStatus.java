@@ -1,4 +1,4 @@
-package com.example.taskmaster.entity;
+package com.example.taskmaster.domain;
 
 public enum TaskStatus {
     TODO,

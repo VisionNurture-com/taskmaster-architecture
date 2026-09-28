@@ -1,30 +1,14 @@
-package com.example.taskmaster.entity;
+package com.example.taskmaster.domain;
 
-import jakarta.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "tasks")
 public class Task {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false, length = 200)
     private String title;
-
-    @Column(length = 1000)
     private String description;
-
-    @Column(name = "due_date")
     private LocalDate dueDate;
-
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20)
     private TaskStatus status;
-
-    protected Task() {}
 
     /** 新規タスク作成用コンストラクタ */
     public Task(String title, String description, LocalDate dueDate) {
@@ -35,7 +19,7 @@ public class Task {
         validate();
     }
 
-    /** DB復元用コンストラクタ */
+    /** DB復元用コンストラクタ（インフラ層が使用） */
     public Task(Long id, String title, String description,
                 LocalDate dueDate, TaskStatus status) {
         this.id = id;

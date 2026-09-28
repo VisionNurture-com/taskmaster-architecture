@@ -1,6 +1,6 @@
-package com.example.taskmaster.controller;
+package com.example.taskmaster.presentation;
 
-import com.example.taskmaster.service.TaskNotFoundException;
+import com.example.taskmaster.application.TaskNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
