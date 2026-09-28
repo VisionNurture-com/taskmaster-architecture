@@ -55,6 +55,22 @@ public class TaskService {
     }
 
     @Transactional
+    public TaskResponse completeTask(Long taskId) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new TaskNotFoundException(taskId));
+        task.complete();  // Taskが状態遷移ルールを管理
+        return TaskResponse.from(taskRepository.save(task));
+    }
+
+    @Transactional
+    public TaskResponse startTask(Long taskId) {
+        Task task = taskRepository.findById(taskId)
+                .orElseThrow(() -> new TaskNotFoundException(taskId));
+        task.startProgress();  // Taskが状態遷移ルールを管理
+        return TaskResponse.from(taskRepository.save(task));
+    }
+
+    @Transactional
     public void delete(Long id) {
         if (!taskRepository.existsById(id)) {
             throw new TaskNotFoundException(id);

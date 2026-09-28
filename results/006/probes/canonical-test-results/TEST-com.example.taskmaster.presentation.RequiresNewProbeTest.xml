@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.presentation.RequiresNewProbeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-28T00:24:08.205Z" hostname="<host>" time="3.453">
+  <properties/>
+  <testcase name="r6()" classname="com.example.taskmaster.presentation.RequiresNewProbeTest" time="0.102"/>
+  <system-out><![CDATA[09:24:08.243 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.presentation.RequiresNewProbeTest]: RequiresNewProbeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:24:08.255 [Test worker] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+09:24:08.256 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+09:24:08.260 [Test worker] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+09:24:08.338 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+09:24:08.472 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+09:24:08.473 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+09:24:08.483 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop
+  Total Memory: 7933 MB
+  Labels: 
+    com.docker.desktop.address=unix://~/Library/Containers/com.docker.docker/Data/docker-cli.sock
+09:24:08.665 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+09:24:08.794 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: 7cc9414a3a20bf8bbe1dd12e55983bd1036ea54e9a2ccb2390724c0b46579c15
+09:24:08.931 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT0.265712S
+09:24:08.933 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+09:24:08.933 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+09:24:08.933 [Test worker] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+09:24:08.971 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.presentation.RequiresNewProbeTest
+09:24:08.994 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.presentation.RequiresNewProbeTest]: RequiresNewProbeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:24:08.996 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.presentation.RequiresNewProbeTest
+09:24:09.004 [Test worker] INFO tc.postgres:17-alpine -- Creating container for image: postgres:17-alpine
+09:24:09.037 [Test worker] INFO tc.postgres:17-alpine -- Container postgres:17-alpine is starting: 02631f04099a501be352f59206acd06af3f8e678d5047944b5ebfabe9842eeaf
+09:24:09.727 [Test worker] INFO tc.postgres:17-alpine -- Container postgres:17-alpine started in PT0.722631S
+09:24:09.728 [Test worker] INFO tc.postgres:17-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:52017/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-28T09:24:09.844+09:00  INFO 19925 --- [    Test worker] c.e.t.presentation.RequiresNewProbeTest  : Starting RequiresNewProbeTest using Java 25.0.4 with PID 19925 (started by <user> in <work>/presentation)
+2026-09-28T09:24:09.844+09:00  INFO 19925 --- [    Test worker] c.e.t.presentation.RequiresNewProbeTest  : No active profile set, falling back to 1 default profile: "default"
+2026-09-28T09:24:10.020+09:00  INFO 19925 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-28T09:24:10.038+09:00  INFO 19925 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2026-09-28T09:24:10.561+09:00  INFO 19925 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-28T09:24:10.581+09:00  INFO 19925 --- [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-28T09:24:10.665+09:00  INFO 19925 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-28T09:24:10.676+09:00  INFO 19925 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-28T09:24:10.737+09:00  INFO 19925 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@686ace1f
+2026-09-28T09:24:10.738+09:00  INFO 19925 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-28T09:24:10.770+09:00  INFO 19925 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:52017/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-28T09:24:11.052+09:00  INFO 19925 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    set client_min_messages = WARNING
+Hibernate: 
+    alter table if exists task_tags 
+       drop constraint if exists FKeiqe3k9ent7icelm1cihqn164
+Hibernate: 
+    alter table if exists task_tags 
+       drop constraint if exists FK7xi1reghkj37gqwlr1ujxrxll
+Hibernate: 
+    drop table if exists audit_logs cascade
+Hibernate: 
+    drop table if exists tags cascade
+Hibernate: 
+    drop table if exists task_tags cascade
+Hibernate: 
+    drop table if exists tasks cascade
+Hibernate: 
+    create table audit_logs (
+        id bigint generated by default as identity,
+        logged_at timestamp(6) with time zone not null,
+        task_id bigint,
+        action varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table tags (
+        id bigint generated by default as identity,
+        name varchar(50) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table task_tags (
+        tag_id bigint not null,
+        task_id bigint not null,
+        primary key (tag_id, task_id)
+    )
+Hibernate: 
+    create table tasks (
+        due_date date,
+        id bigint generated by default as identity,
+        status varchar(20) not null check ((status in ('TODO','IN_PROGRESS','DONE'))),
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+Hibernate: 
+    alter table if exists task_tags 
+       add constraint FKeiqe3k9ent7icelm1cihqn164 
+       foreign key (tag_id) 
+       references tags
+Hibernate: 
+    alter table if exists task_tags 
+       add constraint FK7xi1reghkj37gqwlr1ujxrxll 
+       foreign key (task_id) 
+       references tasks
+2026-09-28T09:24:11.077+09:00  INFO 19925 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:24:11.108+09:00  INFO 19925 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-28T09:24:11.416+09:00  WARN 19925 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-28T09:24:11.550+09:00  INFO 19925 --- [    Test worker] c.e.t.presentation.RequiresNewProbeTest  : Started RequiresNewProbeTest in 1.799 seconds (process running for 3.674)
+Hibernate: 
+    insert 
+    into
+        tasks
+        (description, due_date, status, title) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        audit_logs alje1_0
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+Hibernate: 
+    select
+        t1_0.task_id,
+        t1_1.id,
+        t1_1.name 
+    from
+        task_tags t1_0 
+    join
+        tags t1_1 
+            on t1_1.id=t1_0.tag_id 
+    where
+        t1_0.task_id=?
+Hibernate: 
+    insert 
+    into
+        audit_logs
+        (action, logged_at, task_id) 
+    values
+        (?, ?, ?)
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+PROBE R6a_taskStatusAfterRollback=TODO
+Hibernate: 
+    select
+        count(*) 
+    from
+        audit_logs alje1_0
+PROBE R6a_auditLogsAdded=1
+Hibernate: 
+    insert 
+    into
+        tasks
+        (description, due_date, status, title) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        audit_logs alje1_0
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+Hibernate: 
+    select
+        t1_0.task_id,
+        t1_1.id,
+        t1_1.name 
+    from
+        task_tags t1_0 
+    join
+        tags t1_1 
+            on t1_1.id=t1_0.tag_id 
+    where
+        t1_0.task_id=?
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+PROBE R6b_taskStatusAfterRollback=TODO
+Hibernate: 
+    select
+        count(*) 
+    from
+        audit_logs alje1_0
+PROBE R6b_auditLogsAdded=0
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (~/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.18.11/82212e5b3633e7a65fca8bec525762cfb6c9bae4/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

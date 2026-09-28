@@ -1,0 +1,9 @@
+{
+  "detail": "入力値にエラーがあります",
+  "instance": "/api/tasks",
+  "status": 400,
+  "title": "バリデーションエラー",
+  "errors": {
+    "title": "タイトルは必須です"
+  }
+}

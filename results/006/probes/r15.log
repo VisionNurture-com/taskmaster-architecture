@@ -1,0 +1,24 @@
+> Task :clean UP-TO-DATE
+> Task :application:clean UP-TO-DATE
+> Task :domain:clean UP-TO-DATE
+> Task :infrastructure:clean UP-TO-DATE
+> Task :presentation:clean UP-TO-DATE
+> Task :domain:compileJava
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :infrastructure:compileJava
+> Task :infrastructure:processResources NO-SOURCE
+> Task :infrastructure:classes
+> Task :infrastructure:compileTestJava
+> Task :infrastructure:processTestResources NO-SOURCE
+> Task :infrastructure:testClasses
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-09-28T09:24:28.222+09:00  INFO 20107 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:24:28.223+09:00  INFO 20107 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-28T09:24:28.224+09:00  INFO 20107 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+> Task :infrastructure:test
+
+BUILD SUCCESSFUL in 4s
+10 actionable tasks: 5 executed, 5 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.0/userguide/configuration_cache_enabling.html

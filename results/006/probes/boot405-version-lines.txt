@@ -1,0 +1,2 @@
+3:    id("org.springframework.boot") version "4.0.5" apply false
+22:            mavenBom("org.springframework.boot:spring-boot-dependencies:4.0.5")

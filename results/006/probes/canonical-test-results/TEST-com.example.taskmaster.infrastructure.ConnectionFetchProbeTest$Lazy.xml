@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.infrastructure.ConnectionFetchProbeTest$Lazy" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-28T00:23:53.018Z" hostname="<host>" time="0.192">
+  <properties/>
+  <testcase name="lazy()" classname="com.example.taskmaster.infrastructure.ConnectionFetchProbeTest$Lazy" time="0.011"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-28T09:23:53.041+09:00  INFO 19874 --- [    Test worker] c.e.t.i.ConnectionFetchProbeTest$Lazy    : Starting ConnectionFetchProbeTest.Lazy using Java 25.0.4 with PID 19874 (started by <user> in <work>/infrastructure)
+2026-09-28T09:23:53.042+09:00  INFO 19874 --- [    Test worker] c.e.t.i.ConnectionFetchProbeTest$Lazy    : No active profile set, falling back to 1 default profile: "default"
+2026-09-28T09:23:53.079+09:00  INFO 19874 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-28T09:23:53.083+09:00  INFO 19874 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2026-09-28T09:23:53.124+09:00  INFO 19874 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-28T09:23:53.131+09:00  INFO 19874 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-28T09:23:53.132+09:00  INFO 19874 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-28T09:23:53.145+09:00  INFO 19874 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@644e2230
+2026-09-28T09:23:53.145+09:00  INFO 19874 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-28T09:23:53.151+09:00  INFO 19874 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:51955/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-28T09:23:53.163+09:00  INFO 19874 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-28T09:23:53.173+09:00  INFO 19874 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:23:53.199+09:00  INFO 19874 --- [    Test worker] c.e.t.i.ConnectionFetchProbeTest$Lazy    : Started ConnectionFetchProbeTest.Lazy in 0.169 seconds (process running for 4.744)
+PROBE R7_lazy_dataSourceClass=LazyConnectionDataSourceProxy
+PROBE R7_lazy_activeBeforeSql=0
+PROBE R7_lazy_activeAfterSql=1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

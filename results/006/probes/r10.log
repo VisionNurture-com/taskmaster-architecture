@@ -1,0 +1,90 @@
+> Task :domain:compileJava
+
+> Task :application:compileJava FAILED
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:36: error: cannot find symbol
+            TaskStatus status, int page, int size) {
+            ^
+  symbol:   class TaskStatus
+  location: class TaskService
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:35: error: cannot find symbol
+    public Page<TaskResponse> findByStatus(
+           ^
+  symbol:   class Page
+  location: class TaskService
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:37: error: cannot find symbol
+        Pageable pageable = PageRequest.of(page, size,
+        ^
+  symbol:   class Pageable
+  location: class TaskService
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:37: error: cannot find symbol
+        Pageable pageable = PageRequest.of(page, size,
+                            ^
+  symbol:   variable PageRequest
+  location: class TaskService
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:38: error: cannot find symbol
+                Sort.by("dueDate").ascending());
+                ^
+  symbol:   variable Sort
+  location: class TaskService
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:39: error: cannot find symbol
+        return springDataRepo.findByStatus(status, pageable)
+               ^
+  symbol:   variable springDataRepo
+  location: class TaskService
+<work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:40: error: cannot find symbol
+                .map(TaskJpaEntity::toDomain)
+                     ^
+  symbol:   variable TaskJpaEntity
+  location: class TaskService
+7 errors
+
+[Incubating] Problems report is available at: file://<work>/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':application:compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:36: error: cannot find symbol
+              TaskStatus status, int page, int size) {
+              ^
+    symbol:   class TaskStatus
+    location: class TaskService
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:35: error: cannot find symbol
+      public Page<TaskResponse> findByStatus(
+             ^
+    symbol:   class Page
+    location: class TaskService
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:37: error: cannot find symbol
+          Pageable pageable = PageRequest.of(page, size,
+          ^
+    symbol:   class Pageable
+    location: class TaskService
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:37: error: cannot find symbol
+          Pageable pageable = PageRequest.of(page, size,
+                              ^
+    symbol:   variable PageRequest
+    location: class TaskService
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:38: error: cannot find symbol
+                  Sort.by("dueDate").ascending());
+                  ^
+    symbol:   variable Sort
+    location: class TaskService
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:39: error: cannot find symbol
+          return springDataRepo.findByStatus(status, pageable)
+                 ^
+    symbol:   variable springDataRepo
+    location: class TaskService
+  <work>/application/src/main/java/com/example/taskmaster/application/TaskService.java:40: error: cannot find symbol
+                  .map(TaskJpaEntity::toDomain)
+                       ^
+    symbol:   variable TaskJpaEntity
+    location: class TaskService
+  7 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 454ms
+2 actionable tasks: 2 executed

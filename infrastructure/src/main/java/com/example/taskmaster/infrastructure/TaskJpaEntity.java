@@ -4,6 +4,8 @@ import com.example.taskmaster.domain.Task;
 import com.example.taskmaster.domain.TaskStatus;
 import jakarta.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "tasks")
@@ -26,6 +28,12 @@ public class TaskJpaEntity {
     @Column(nullable = false, length = 20)
     private TaskStatus status;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "task_tags",
+            joinColumns = @JoinColumn(name = "task_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id"))
+    private Set<TagJpaEntity> tags = new HashSet<>();
+
     protected TaskJpaEntity() {}
 
     static TaskJpaEntity fromDomain(Task task) {
@@ -40,5 +48,9 @@ public class TaskJpaEntity {
 
     Task toDomain() {
         return new Task(id, title, description, dueDate, status);
+    }
+
+    Set<TagJpaEntity> getTags() {
+        return tags;
     }
 }

@@ -1,0 +1,11 @@
+rcTest: 0
+testsInXml: 2
+rcQ5_starterWeb: 0
+q5DeprecationLines: 0
+bootRunStarted: 1 (waited 4s)
+postHasFraction: 1
+validationHasType: 0
+0
+validationHasInstance: 1
+putResponseUpdatedEqualsCreated: True
+getAfterPutUpdatedAfterCreated: True

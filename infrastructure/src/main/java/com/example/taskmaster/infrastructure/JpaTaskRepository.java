@@ -2,6 +2,10 @@ package com.example.taskmaster.infrastructure;
 
 import com.example.taskmaster.domain.Task;
 import com.example.taskmaster.domain.TaskRepository;
+import com.example.taskmaster.domain.TaskStatus;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -41,5 +45,14 @@ public class JpaTaskRepository implements TaskRepository {
     @Override
     public boolean existsById(Long id) {
         return springDataRepository.existsById(id);
+    }
+
+    @Override
+    public List<Task> findByStatus(TaskStatus status, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size,
+                Sort.by("dueDate").ascending());
+        return springDataRepository.findByStatus(status, pageable)
+                .map(TaskJpaEntity::toDomain)
+                .getContent();
     }
 }

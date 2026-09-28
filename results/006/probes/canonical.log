@@ -1,0 +1,55 @@
+> Task :clean UP-TO-DATE
+> Task :application:clean UP-TO-DATE
+> Task :domain:clean UP-TO-DATE
+> Task :infrastructure:clean UP-TO-DATE
+> Task :presentation:clean UP-TO-DATE
+> Task :domain:compileJava
+> Task :infrastructure:compileJava
+> Task :infrastructure:processResources NO-SOURCE
+> Task :infrastructure:classes
+> Task :infrastructure:jar
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :infrastructure:compileTestJava
+> Task :infrastructure:processTestResources NO-SOURCE
+> Task :infrastructure:testClasses
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-09-28T09:23:57.573+09:00  INFO 19874 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:23:57.574+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-28T09:23:57.575+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-28T09:23:57.575+09:00  INFO 19874 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:23:57.575+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-28T09:23:59.641+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-09-28T09:23:59.644+09:00  INFO 19874 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:23:59.645+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-09-28T09:24:04.616+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-09-28T09:24:04.619+09:00  INFO 19874 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:24:04.620+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-09-28T09:24:04.622+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-09-28T09:24:04.623+09:00  INFO 19874 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:24:04.624+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-09-28T09:24:06.628+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-09-28T09:24:06.631+09:00  INFO 19874 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:24:06.632+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-09-28T09:24:07.633+09:00  INFO 19874 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+> Task :infrastructure:test
+> Task :application:compileJava
+> Task :application:processResources NO-SOURCE
+> Task :application:classes
+> Task :application:jar
+> Task :presentation:compileJava
+> Task :presentation:processResources
+> Task :presentation:classes
+> Task :presentation:compileTestJava
+> Task :presentation:processTestResources NO-SOURCE
+> Task :presentation:testClasses
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-09-28T09:24:11.826+09:00  INFO 19925 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-28T09:24:11.827+09:00  INFO 19925 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-28T09:24:11.828+09:00  INFO 19925 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+> Task :presentation:test
+
+BUILD SUCCESSFUL in 24s
+17 actionable tasks: 12 executed, 5 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.0/userguide/configuration_cache_enabling.html

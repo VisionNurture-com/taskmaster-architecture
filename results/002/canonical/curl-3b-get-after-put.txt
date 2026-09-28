@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "title": "Spring Boot 4を学ぶ（更新）",
+  "description": "CRUD完成！",
+  "completed": false,
+  "createdAt": "2026-09-28T09:04:30.379078",
+  "updatedAt": "2026-09-28T09:04:30.532103"
+}
