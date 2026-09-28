@@ -1,0 +1,10 @@
+default 1 1.508
+async 1 1.497
+default 2 1.525
+async 2 1.469
+default 3 1.51
+async 3 1.51
+default 4 1.478
+async 4 1.498
+default 5 1.509
+async 5 1.46

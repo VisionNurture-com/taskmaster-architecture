@@ -1,0 +1,1 @@
+17:    testImplementation("com.tngtech.archunit:archunit-junit5-engine:1.4.1")

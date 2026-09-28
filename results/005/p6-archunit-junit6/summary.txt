@@ -1,0 +1,4 @@
+A: rc=0 testsAll=3 probeTests=1 probeFailures=0
+B: rc=0 testsAll=3 probeTests=1 probeFailures=0
+C: rc=0 testsAll=3 probeTests=1 probeFailures=0
+Cv: rc=1 testsAll=3 probeTests=1 probeFailures=1

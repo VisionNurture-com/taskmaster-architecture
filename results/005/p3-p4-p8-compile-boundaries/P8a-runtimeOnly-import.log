@@ -1,0 +1,37 @@
+> Task :domain:compileJava
+> Task :application:compileJava
+
+> Task :presentation:compileJava FAILED
+<work>/presentation/src/main/java/com/example/taskmaster/presentation/TaskController.java:2: error: package com.example.taskmaster.infrastructure does not exist
+import com.example.taskmaster.infrastructure.JpaTaskRepository;
+                                            ^
+<work>/presentation/src/main/java/com/example/taskmaster/presentation/TaskController.java:17: error: cannot find symbol
+    private JpaTaskRepository shortcut;
+            ^
+  symbol:   class JpaTaskRepository
+  location: class TaskController
+2 errors
+
+[Incubating] Problems report is available at: file://<work>/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':presentation:compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  <work>/presentation/src/main/java/com/example/taskmaster/presentation/TaskController.java:2: error: package com.example.taskmaster.infrastructure does not exist
+  import com.example.taskmaster.infrastructure.JpaTaskRepository;
+                                              ^
+  <work>/presentation/src/main/java/com/example/taskmaster/presentation/TaskController.java:17: error: cannot find symbol
+      private JpaTaskRepository shortcut;
+              ^
+    symbol:   class JpaTaskRepository
+    location: class TaskController
+  2 errors
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 483ms
+3 actionable tasks: 3 executed

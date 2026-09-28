@@ -1,0 +1,49 @@
+> Task :clean UP-TO-DATE
+> Task :application:clean UP-TO-DATE
+> Task :domain:clean UP-TO-DATE
+> Task :infrastructure:clean UP-TO-DATE
+> Task :presentation:clean UP-TO-DATE
+> Task :domain:compileJava
+> Task :application:compileJava
+> Task :application:processResources NO-SOURCE
+> Task :application:classes
+> Task :application:jar
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :infrastructure:compileJava
+> Task :infrastructure:processResources NO-SOURCE
+> Task :infrastructure:classes
+> Task :infrastructure:jar
+> Task :presentation:compileJava
+> Task :presentation:processResources
+> Task :presentation:classes
+> Task :presentation:compileTestJava
+> Task :presentation:processTestResources NO-SOURCE
+> Task :presentation:testClasses
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-09-27T23:05:06.484+09:00  INFO 68330 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    set client_min_messages = WARNING
+2026-09-27T23:05:06.486+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5b5f61cc (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.486+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5210011e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.486+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1c41ac05 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.486+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@463065d5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.486+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@51a9dc11 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.486+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3633fcb (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.487+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@12d38a26 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.487+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@57885b64 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.487+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@48de4cd0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-09-27T23:05:06.487+09:00  WARN 68330 --- [ionShutdownHook] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@52d9bf67 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+> Task :presentation:test
+
+2026-09-27T23:05:36.493+09:00  WARN 68330 --- [ionShutdownHook] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 08001
+2026-09-27T23:05:36.494+09:00  WARN 68330 --- [ionShutdownHook] org.hibernate.orm.jdbc.error             : HikariPool-1 - Connection is not available, request timed out after 30006ms (total=0, active=0, idle=0, waiting=0)
+2026-09-27T23:05:36.494+09:00  WARN 68330 --- [ionShutdownHook] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 08001
+2026-09-27T23:05:36.494+09:00  WARN 68330 --- [ionShutdownHook] org.hibernate.orm.jdbc.error             : HikariPool-1 - Connection is not available, request timed out after 30006ms (total=0, active=0, idle=0, waiting=0)
+2026-09-27T23:05:36.495+09:00  WARN 68330 --- [ionShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [HikariPool-1 - Connection is not available, request timed out after 30006ms (total=0, active=0, idle=0, waiting=0)] [n/a]
+2026-09-27T23:05:36.495+09:00  INFO 68330 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-27T23:05:36.663+09:00  INFO 68330 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+BUILD SUCCESSFUL in 35s
+15 actionable tasks: 10 executed, 5 up-to-date

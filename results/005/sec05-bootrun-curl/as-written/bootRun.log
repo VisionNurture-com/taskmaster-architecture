@@ -1,0 +1,70 @@
+> Task :domain:compileJava
+> Task :application:compileJava
+> Task :application:processResources NO-SOURCE
+> Task :application:classes
+> Task :application:jar
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :infrastructure:compileJava
+> Task :infrastructure:processResources NO-SOURCE
+> Task :infrastructure:classes
+> Task :infrastructure:jar
+> Task :presentation:compileJava
+> Task :presentation:processResources
+> Task :presentation:classes
+> Task :presentation:resolveMainClassName
+
+> Task :presentation:bootRun FAILED
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-27T23:07:33.491+09:00  INFO 71278 --- [           main] c.e.taskmaster.TaskmasterApplication     : Starting TaskmasterApplication using Java 25.0.4 with PID 71278 (<work>/presentation/build/classes/java/main started by <user> in <work>/presentation)
+2026-09-27T23:07:33.492+09:00  INFO 71278 --- [           main] c.e.taskmaster.TaskmasterApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-27T23:07:33.541+09:00 ERROR 71278 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: No Docker Compose file found in directory '<work>/presentation/.'
+	at org.springframework.util.Assert.state(Assert.java:102) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.getComposeFile(DockerComposeLifecycleManager.java:182) ~[spring-boot-docker-compose-4.1.1.jar:4.1.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeLifecycleManager.start(DockerComposeLifecycleManager.java:112) ~[spring-boot-docker-compose-4.1.1.jar:4.1.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:53) ~[spring-boot-docker-compose-4.1.1.jar:4.1.1]
+	at org.springframework.boot.docker.compose.lifecycle.DockerComposeListener.onApplicationEvent(DockerComposeListener.java:35) ~[spring-boot-docker-compose-4.1.1.jar:4.1.1]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:180) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:173) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:151) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:137) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.context.event.EventPublishingRunListener.contextLoaded(EventPublishingRunListener.java:99) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$contextLoaded$0(SpringApplicationRunListeners.java:74) ~[spring-boot-4.1.1.jar:4.1.1]
+	at java.base/java.util.ImmutableCollections$List12.forEach(ImmutableCollections.java:681) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:123) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:117) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplicationRunListeners.contextLoaded(SpringApplicationRunListeners.java:74) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:418) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.example.taskmaster.TaskmasterApplication.main(TaskmasterApplication.java:10) ~[main/:na]
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':presentation:bootRun' (registered by plugin 'org.springframework.boot').
+> Process 'command '~/.sdkman/candidates/java/25.0.4-tem/bin/java'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 956ms
+10 actionable tasks: 10 executed

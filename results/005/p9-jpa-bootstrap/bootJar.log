@@ -1,0 +1,20 @@
+> Task :domain:compileJava
+> Task :application:compileJava
+> Task :application:processResources NO-SOURCE
+> Task :application:classes
+> Task :application:jar
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :infrastructure:compileJava
+> Task :infrastructure:processResources NO-SOURCE
+> Task :infrastructure:classes
+> Task :infrastructure:jar
+> Task :presentation:compileJava
+> Task :presentation:processResources
+> Task :presentation:classes
+> Task :presentation:resolveMainClassName
+> Task :presentation:bootJar
+
+BUILD SUCCESSFUL in 873ms
+10 actionable tasks: 10 executed

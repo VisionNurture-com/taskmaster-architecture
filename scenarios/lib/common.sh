@@ -5,18 +5,20 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 GRADLE_OPTS_COMMON=(--console=plain --no-build-cache --no-configuration-cache)
 
-# HEAD のコピーを作り、そのパスを返す（作業ツリーの未コミット変更は含めない）
+# REF（既定は HEAD）のコピーを作り、そのパスを返す（作業ツリーの未コミット変更は含めない）
 new_copy() {
   local d
   d="$(mktemp -d)"
-  git -C "$ROOT" archive HEAD | tar -x -C "$d"
+  git -C "$ROOT" archive "${REF:-HEAD}" | tar -x -C "$d"
   echo "$d"
 }
 
-# 出力から一時ディレクトリとホームのパスを除く
+# 出力から一時ディレクトリ・ホームのパス・ホスト名・OS のユーザー名を除く（JUnit XML の hostname 属性と、Spring Boot の起動ログの started by を含む）
 sanitize() {
-  local work="$1"
-  sed -e "s#${work}#<work>#g" -e "s#${HOME}#~#g" -e 's#/private<work>#<work>#g'
+  local work="$1" host user
+  host="$(hostname)"
+  user="$(id -un)"
+  sed -e "s#${work}#<work>#g" -e "s#${HOME}#~#g" -e 's#/private<work>#<work>#g' -e "s#${host}#<host>#g" -e "s#started by ${user} in#started by <user> in#g"
 }
 
 # コマンドを実行し、終了コードと出力をログへ残す（set -e で止めない）
@@ -34,7 +36,7 @@ record_env() {
   local out="$1"
   {
     echo "measuredAt: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-    echo "gitHead: $(git -C "$ROOT" rev-parse --short HEAD)"
+    echo "gitHead: $(git -C "$ROOT" rev-parse --short "${REF:-HEAD}")"
     echo "os: $(uname -s) $(uname -r) $(uname -m)"
     echo "java: $(java -version 2>&1 | head -1)"
     echo "gradleWrapper: $(grep distributionUrl "$ROOT/gradle/wrapper/gradle-wrapper.properties" | sed 's#.*gradle-##; s#-bin.zip##')"

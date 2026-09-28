@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.presentation.ProbeArchitectureTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-09-27T14:05:41.705Z" hostname="<host>" time="0.452">
+  <properties/>
+  <testcase name="presentationDoesNotUseInfrastructure" classname="com.example.taskmaster.presentation.ProbeArchitectureTest" time="0.452">
+    <failure message="java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes that reside in a package '..presentation..' should depend on classes that reside in a package '..infrastructure..'' was violated (1 times):&#10;Field &lt;com.example.taskmaster.presentation.TaskController.shortcut&gt; has type &lt;com.example.taskmaster.infrastructure.JpaTaskRepository&gt; in (TaskController.java:0)" type="java.lang.AssertionError">java.lang.AssertionError: Architecture Violation [Priority: MEDIUM] - Rule 'no classes that reside in a package '..presentation..' should depend on classes that reside in a package '..infrastructure..'' was violated (1 times):
+Field &lt;com.example.taskmaster.presentation.TaskController.shortcut&gt; has type &lt;com.example.taskmaster.infrastructure.JpaTaskRepository&gt; in (TaskController.java:0)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.assertNoViolation(ArchRule.java:94)
+	at com.tngtech.archunit.lang.ArchRule$Assertions.check(ArchRule.java:86)
+	at com.tngtech.archunit.lang.ArchRule$Factory$SimpleArchRule.check(ArchRule.java:165)
+	at com.tngtech.archunit.lang.syntax.ObjectsShouldInternal.check(ObjectsShouldInternal.java:81)
+	at com.tngtech.archunit.junit.internal.ArchUnitTestDescriptor$ArchUnitRuleDescriptor.execute(ArchUnitTestDescriptor.java:168)
+	at com.tngtech.archunit.junit.internal.ArchUnitTestDescriptor$ArchUnitRuleDescriptor.execute(ArchUnitTestDescriptor.java:151)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+</failure>
+  </testcase>
+  <system-out><![CDATA[2026-09-27T23:05:41.709+09:00  INFO 68833 --- [    Test worker] com.tngtech.archunit.core.PluginLoader   : Detected Java version 25.0.4
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

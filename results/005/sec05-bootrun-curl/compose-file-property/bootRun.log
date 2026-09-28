@@ -1,0 +1,151 @@
+> Task :domain:compileJava
+> Task :application:compileJava
+> Task :application:processResources NO-SOURCE
+> Task :application:classes
+> Task :application:jar
+> Task :domain:processResources NO-SOURCE
+> Task :domain:classes
+> Task :domain:jar
+> Task :infrastructure:compileJava
+> Task :infrastructure:processResources NO-SOURCE
+> Task :infrastructure:classes
+> Task :infrastructure:jar
+> Task :presentation:compileJava
+> Task :presentation:processResources
+> Task :presentation:classes
+> Task :presentation:resolveMainClassName
+
+> Task :presentation:bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-27T23:07:44.369+09:00  INFO 71480 --- [           main] c.e.taskmaster.TaskmasterApplication     : Starting TaskmasterApplication using Java 25.0.4 with PID 71480 (<work>/presentation/build/classes/java/main started by <user> in <work>/presentation)
+2026-09-27T23:07:44.370+09:00  INFO 71480 --- [           main] c.e.taskmaster.TaskmasterApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-27T23:07:44.389+09:00  INFO 71480 --- [           main] .s.b.d.c.l.DockerComposeLifecycleManager : Using Docker Compose file <work>/compose.yaml
+2026-09-27T23:07:44.664+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network tmpx5daqvw43y_default Creating 
+2026-09-27T23:07:44.665+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network tmpx5daqvw43y_default Creating 
+2026-09-27T23:07:44.680+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network tmpx5daqvw43y_default Created 
+2026-09-27T23:07:44.680+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Network tmpx5daqvw43y_default Created 
+2026-09-27T23:07:44.680+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container tmpx5daqvw43y-postgres-1 Creating 
+2026-09-27T23:07:44.714+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container tmpx5daqvw43y-postgres-1 Created 
+2026-09-27T23:07:44.721+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container tmpx5daqvw43y-postgres-1 Starting 
+2026-09-27T23:07:44.773+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container tmpx5daqvw43y-postgres-1 Started 
+2026-09-27T23:07:44.773+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container tmpx5daqvw43y-postgres-1 Waiting 
+2026-09-27T23:07:45.276+09:00  INFO 71480 --- [utReader-stderr] o.s.boot.docker.compose.core.DockerCli   :  Container tmpx5daqvw43y-postgres-1 Healthy 
+2026-09-27T23:07:46.775+09:00  INFO 71480 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-27T23:07:46.788+09:00  INFO 71480 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-09-27T23:07:46.908+09:00  INFO 71480 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-27T23:07:46.913+09:00  INFO 71480 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-27T23:07:46.913+09:00  INFO 71480 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-27T23:07:46.931+09:00  INFO 71480 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 328 ms
+2026-09-27T23:07:46.977+09:00  INFO 71480 --- [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-27T23:07:46.990+09:00  INFO 71480 --- [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-27T23:07:47.106+09:00  INFO 71480 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-27T23:07:47.115+09:00  INFO 71480 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-27T23:07:47.173+09:00  INFO 71480 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b7c4734
+2026-09-27T23:07:47.174+09:00  INFO 71480 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-27T23:07:47.198+09:00  INFO 71480 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/taskmaster]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: taskmaster/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-27T23:07:47.425+09:00  INFO 71480 --- [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    set client_min_messages = WARNING
+Hibernate: 
+    drop table if exists tasks cascade
+Hibernate: 
+    create table tasks (
+        due_date date,
+        id bigint generated by default as identity,
+        status varchar(20) not null check ((status in ('TODO','IN_PROGRESS','DONE'))),
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+2026-09-27T23:07:47.443+09:00  INFO 71480 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-27T23:07:47.465+09:00  INFO 71480 --- [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-27T23:07:47.522+09:00  WARN 71480 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-27T23:07:47.607+09:00  INFO 71480 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-27T23:07:47.609+09:00  INFO 71480 --- [           main] c.e.taskmaster.TaskmasterApplication     : Started TaskmasterApplication in 3.363 seconds (process running for 3.483)
+2026-09-27T23:07:48.256+09:00  INFO 71480 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-27T23:07:48.256+09:00  INFO 71480 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-27T23:07:48.256+09:00  INFO 71480 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+Hibernate: 
+    insert 
+    into
+        tasks
+        (description, due_date, status, title) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+2026-09-27T23:07:48.543+09:00  INFO 71480 --- [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-27T23:07:48.546+09:00  INFO 71480 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-27T23:07:48.547+09:00  INFO 71480 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Hibernate: 
+    set client_min_messages = WARNING
+Hibernate: 
+    drop table if exists tasks cascade
+2026-09-27T23:07:48.554+09:00  INFO 71480 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-27T23:07:48.554+09:00  INFO 71480 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+> Task :presentation:bootRun FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':presentation:bootRun' (registered by plugin 'org.springframework.boot').
+> Process 'command '~/.sdkman/candidates/java/25.0.4-tem/bin/java'' finished with non-zero exit value 143 (this value may indicate that the process was terminated with the SIGTERM signal)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5s
+10 actionable tasks: 10 executed

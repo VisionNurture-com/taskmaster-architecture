@@ -13,10 +13,18 @@ Gradle マルチプロジェクトで、ドメイン層・アプリケーショ�
 ## テストの実行
 
 ```bash
-./gradlew :domain:test :application:test
+./gradlew test
 ```
 
-`infrastructure` と `presentation` は、現時点ではディレクトリだけを用意しています。
+`presentation` の統合テストは Testcontainers で PostgreSQL のコンテナを起動するため、Docker が要ります。
+
+## アプリの起動
+
+```bash
+./gradlew :presentation:bootRun
+```
+
+Spring Boot の Docker Compose 連携が、ルートの `compose.yaml` から PostgreSQL を起動します。
 
 ## 測定結果
 

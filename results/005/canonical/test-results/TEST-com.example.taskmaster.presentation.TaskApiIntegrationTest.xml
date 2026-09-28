@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.presentation.TaskApiIntegrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-27T14:12:54.685Z" hostname="<host>" time="3.045">
+  <properties/>
+  <testcase name="タスク作成→取得の統合テスト" classname="com.example.taskmaster.presentation.TaskApiIntegrationTest" time="0.352"/>
+  <testcase name="存在しないタスク取得で404" classname="com.example.taskmaster.presentation.TaskApiIntegrationTest" time="0.009"/>
+  <system-out><![CDATA[23:12:54.723 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.presentation.TaskApiIntegrationTest]: TaskApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:12:54.735 [Test worker] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+23:12:54.736 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+23:12:54.740 [Test worker] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+23:12:54.822 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+23:12:54.958 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+23:12:54.958 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+23:12:54.969 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop
+  Total Memory: 7933 MB
+  Labels: 
+    com.docker.desktop.address=unix://~/Library/Containers/com.docker.docker/Data/docker-cli.sock
+23:12:55.148 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+23:12:55.248 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: ef0a6ce5a894ceaaecda3c2b6d9d76282fc90024125452a06e300a32cd499ffe
+23:12:55.383 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT0.235558S
+23:12:55.386 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+23:12:55.386 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+23:12:55.386 [Test worker] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+23:12:55.428 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.presentation.TaskApiIntegrationTest
+23:12:55.449 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.presentation.TaskApiIntegrationTest]: TaskApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:12:55.451 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.presentation.TaskApiIntegrationTest
+23:12:55.458 [Test worker] INFO tc.postgres:17-alpine -- Creating container for image: postgres:17-alpine
+23:12:55.490 [Test worker] INFO tc.postgres:17-alpine -- Container postgres:17-alpine is starting: 2ac3b28cfd8b759a9102072ffc55103e6705fdf37a759762dcc37602a8e40f44
+23:12:56.165 [Test worker] INFO tc.postgres:17-alpine -- Container postgres:17-alpine started in PT0.707146S
+23:12:56.166 [Test worker] INFO tc.postgres:17-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:53357/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-27T23:12:56.292+09:00  INFO 76693 --- [    Test worker] c.e.t.p.TaskApiIntegrationTest           : Starting TaskApiIntegrationTest using Java 25.0.4 with PID 76693 (started by <user> in <work>/presentation)
+2026-09-27T23:12:56.292+09:00  INFO 76693 --- [    Test worker] c.e.t.p.TaskApiIntegrationTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-27T23:12:56.461+09:00  INFO 76693 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-27T23:12:56.477+09:00  INFO 76693 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2026-09-27T23:12:56.627+09:00  INFO 76693 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-27T23:12:56.642+09:00  INFO 76693 --- [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-27T23:12:56.750+09:00  INFO 76693 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-27T23:12:56.759+09:00  INFO 76693 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-27T23:12:56.816+09:00  INFO 76693 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69e736bf
+2026-09-27T23:12:56.817+09:00  INFO 76693 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-27T23:12:56.849+09:00  INFO 76693 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:53357/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-27T23:12:57.095+09:00  INFO 76693 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    set client_min_messages = WARNING
+Hibernate: 
+    drop table if exists tasks cascade
+Hibernate: 
+    create table tasks (
+        due_date date,
+        id bigint generated by default as identity,
+        status varchar(20) not null check ((status in ('TODO','IN_PROGRESS','DONE'))),
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+2026-09-27T23:12:57.111+09:00  INFO 76693 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-27T23:12:57.140+09:00  INFO 76693 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-27T23:12:57.213+09:00  WARN 76693 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-27T23:12:57.347+09:00  INFO 76693 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-09-27T23:12:57.347+09:00  INFO 76693 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-09-27T23:12:57.348+09:00  INFO 76693 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-09-27T23:12:57.364+09:00  INFO 76693 --- [    Test worker] c.e.t.p.TaskApiIntegrationTest           : Started TaskApiIntegrationTest in 1.165 seconds (process running for 2.995)
+Hibernate: 
+    insert 
+    into
+        tasks
+        (description, due_date, status, title) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (~/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.18.11/82212e5b3633e7a65fca8bec525762cfb6c9bae4/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

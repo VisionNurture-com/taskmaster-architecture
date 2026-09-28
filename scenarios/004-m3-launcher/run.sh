@@ -4,6 +4,7 @@
 #   b = ランチャーなし・domain に org.springframework.boot を適用
 #   c = ランチャーなし・JUnit Jupiter の宣言もなし・JVM Test Suites（useJUnitJupiter()）
 #   d = ランチャーあり（本リポジトリの構成のまま）
+REF="${REF:-article-004}"
 source "$(dirname "$0")/../lib/common.sh"
 OUT="$ROOT/results/004/m3-launcher"; rm -rf "$OUT"; mkdir -p "$OUT"
 record_env "$OUT/env.txt"

@@ -1,0 +1,7 @@
+$ curl -s http://localhost:8080/api/tasks/999 | jq .
+{
+  "detail": "Task not found: id=999",
+  "instance": "/api/tasks/999",
+  "status": 404,
+  "title": "Not Found"
+}

@@ -1,0 +1,7 @@
+rcDependencies: 0
+rcTest: 0
+testsInXml: 2
+failuresInXml: 0
+passedLinesInConsole: 0
+testsCompletedLineInConsole: 0
+hhh000478AtShutdown: 2

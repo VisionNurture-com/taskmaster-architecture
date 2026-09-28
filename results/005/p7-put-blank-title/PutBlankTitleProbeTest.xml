@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.presentation.PutBlankTitleProbeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-27T14:04:47.128Z" hostname="<host>" time="3.136">
+  <properties/>
+  <testcase name="probe()" classname="com.example.taskmaster.presentation.PutBlankTitleProbeTest" time="0.354"/>
+  <system-out><![CDATA[23:04:47.167 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.presentation.PutBlankTitleProbeTest]: PutBlankTitleProbeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:04:47.180 [Test worker] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+23:04:47.181 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+23:04:47.185 [Test worker] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+23:04:47.263 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+23:04:47.398 [Test worker] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+23:04:47.399 [Test worker] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+23:04:47.409 [Test worker] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.8.0
+  API Version: 1.56
+  Operating System: Docker Desktop
+  Total Memory: 7933 MB
+  Labels: 
+    com.docker.desktop.address=unix://~/Library/Containers/com.docker.docker/Data/docker-cli.sock
+23:04:47.602 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Creating container for image: testcontainers/ryuk:0.14.0
+23:04:47.711 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 is starting: ce85696a368c9f3e5f8a0ca669fbcd3918070d4457a8037541bf978f6686fd6c
+23:04:47.849 [Test worker] INFO tc.testcontainers/ryuk:0.14.0 -- Container testcontainers/ryuk:0.14.0 started in PT0.246525S
+23:04:47.851 [Test worker] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+23:04:47.851 [Test worker] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+23:04:47.851 [Test worker] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+23:04:47.895 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.presentation.PutBlankTitleProbeTest
+23:04:47.916 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.taskmaster.presentation.PutBlankTitleProbeTest]: PutBlankTitleProbeTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:04:47.918 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.taskmaster.TaskmasterApplication for test class com.example.taskmaster.presentation.PutBlankTitleProbeTest
+23:04:47.925 [Test worker] INFO tc.postgres:17-alpine -- Creating container for image: postgres:17-alpine
+23:04:47.958 [Test worker] INFO tc.postgres:17-alpine -- Container postgres:17-alpine is starting: 43172e50a116be036d04024aa21e77119dd753e8b66d1580c8ffe33b086a844d
+23:04:48.663 [Test worker] INFO tc.postgres:17-alpine -- Container postgres:17-alpine started in PT0.73811S
+23:04:48.664 [Test worker] INFO tc.postgres:17-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:53001/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-09-27T23:04:48.790+09:00  INFO 67947 --- [    Test worker] c.e.t.p.PutBlankTitleProbeTest           : Starting PutBlankTitleProbeTest using Java 25.0.4 with PID 67947 (started by <user> in <work>/presentation)
+2026-09-27T23:04:48.791+09:00  INFO 67947 --- [    Test worker] c.e.t.p.PutBlankTitleProbeTest           : No active profile set, falling back to 1 default profile: "default"
+2026-09-27T23:04:48.960+09:00  INFO 67947 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-27T23:04:48.977+09:00  INFO 67947 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2026-09-27T23:04:49.133+09:00  INFO 67947 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-27T23:04:49.148+09:00  INFO 67947 --- [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-27T23:04:49.265+09:00  INFO 67947 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-27T23:04:49.274+09:00  INFO 67947 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-27T23:04:49.332+09:00  INFO 67947 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@304704ae
+2026-09-27T23:04:49.332+09:00  INFO 67947 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-27T23:04:49.367+09:00  INFO 67947 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:53001/test?loggerLevel=OFF]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-27T23:04:49.626+09:00  INFO 67947 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    set client_min_messages = WARNING
+Hibernate: 
+    drop table if exists tasks cascade
+Hibernate: 
+    create table tasks (
+        due_date date,
+        id bigint generated by default as identity,
+        status varchar(20) not null check ((status in ('TODO','IN_PROGRESS','DONE'))),
+        title varchar(200) not null,
+        description varchar(1000),
+        primary key (id)
+    )
+2026-09-27T23:04:49.646+09:00  INFO 67947 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-27T23:04:49.677+09:00  INFO 67947 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-27T23:04:49.751+09:00  WARN 67947 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-27T23:04:49.888+09:00  INFO 67947 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-09-27T23:04:49.888+09:00  INFO 67947 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-09-27T23:04:49.889+09:00  INFO 67947 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-09-27T23:04:49.906+09:00  INFO 67947 --- [    Test worker] c.e.t.p.PutBlankTitleProbeTest           : Started PutBlankTitleProbeTest in 1.207 seconds (process running for 3.106)
+PROBE POST_BLANK status=400 body={"detail":"Title must not be blank.","instance":"/api/tasks","status":400,"title":"Bad Request"}
+Hibernate: 
+    insert 
+    into
+        tasks
+        (description, due_date, status, title) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        tje1_0.id,
+        tje1_0.description,
+        tje1_0.due_date,
+        tje1_0.status,
+        tje1_0.title 
+    from
+        tasks tje1_0 
+    where
+        tje1_0.id=?
+Hibernate: 
+    update
+        tasks 
+    set
+        description=?,
+        due_date=?,
+        status=?,
+        title=? 
+    where
+        id=?
+PROBE PUT_BLANK status=200 body={"id":1,"title":"","description":"d","dueDate":"2026-06-01","status":"TODO"}
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (~/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.18.11/82212e5b3633e7a65fca8bec525762cfb6c9bae4/byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

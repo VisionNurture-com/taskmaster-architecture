@@ -1,0 +1,3 @@
+rc: 0
+PROBE POST_BLANK status=400 body={"detail":"Title must not be blank.","instance":"/api/tasks","status":400,"title":"Bad Request"}
+PROBE PUT_BLANK status=200 body={"id":1,"title":"","description":"d","dueDate":"2026-06-01","status":"TODO"}

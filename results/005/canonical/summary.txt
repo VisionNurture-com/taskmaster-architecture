@@ -1,0 +1,6 @@
+rcTest: 0
+testsInXml: 2
+errorLines: 0
+warnLines: 0
+rcCompileWithInfraImport: 1
+importError: presentation/TaskController.java:2: error: package com.example.taskmaster.infrastructure does not exist

@@ -1,0 +1,7 @@
+rcP3_0_importOnly: 1
+rcP3_dependencyThenImport: 0
+rcP4_controllerImportsInfra: 0
+rcP8a_runtimeOnlyImport: 1
+rcP8b_runtimeOnlyTestAndBootJar: 0
+P8b_testsInXml: 2
+P8b_bootJarProjectLibs: BOOT-INF/lib/application-0.0.1-SNAPSHOT.jar,BOOT-INF/lib/domain-0.0.1-SNAPSHOT.jar,BOOT-INF/lib/infrastructure-0.0.1-SNAPSHOT.jar

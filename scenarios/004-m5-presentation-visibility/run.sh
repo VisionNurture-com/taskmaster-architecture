@@ -5,6 +5,7 @@
 #       direct = domain の Task を直接使う
 #       dto    = application の TaskResponse だけを使う
 #     implementation については、TaskResponse の status を String にした場合も測る。
+REF="${REF:-article-004}"
 source "$(dirname "$0")/../lib/common.sh"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 OUT="$ROOT/results/004/m5-presentation-visibility"; rm -rf "$OUT"; mkdir -p "$OUT"

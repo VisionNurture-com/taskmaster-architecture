@@ -2,6 +2,7 @@
 # M1: domain に Spring の import を 1 行入れたとき、どこで止まるか
 #   A = パッケージ分割（1 つのプロジェクトに domain / application を同居・spring-context を依存に持つ）
 #   B = プロジェクト分割（本リポジトリの構成のまま）
+REF="${REF:-article-004}"
 source "$(dirname "$0")/../lib/common.sh"
 OUT="$ROOT/results/004/m1-violation"; rm -rf "$OUT"; mkdir -p "$OUT"
 record_env "$OUT/env.txt"

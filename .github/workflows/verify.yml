@@ -31,7 +31,7 @@ jobs:
           echo "全コミットが $expected です"
 
   test:
-    name: domain / application のテスト
+    name: 全プロジェクトのテスト（presentation の統合テストは Docker を使う）
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -42,4 +42,4 @@ jobs:
           java-version: '25'
       - uses: gradle/actions/setup-gradle@v6
       - name: テストを実行する
-        run: ./gradlew :domain:test :application:test --console=plain
+        run: ./gradlew test --console=plain

@@ -1,0 +1,10 @@
+$ curl -s http://localhost:8080/api/tasks | jq .
+[
+  {
+    "id": 1,
+    "title": "初めてのタスク",
+    "description": "テスト",
+    "dueDate": "2026-06-01",
+    "status": "TODO"
+  }
+]

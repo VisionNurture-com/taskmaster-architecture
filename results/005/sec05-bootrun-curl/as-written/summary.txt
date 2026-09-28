@@ -1,0 +1,5 @@
+waitedSeconds: 2
+started: 0
+noComposeFile: 1
+postHasId: 0
+notFoundHasType: 0

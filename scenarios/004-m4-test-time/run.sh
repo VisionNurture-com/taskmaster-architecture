@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # M4: TaskServiceTest（Mockito のみ）と、同じ 3 件を Spring のコンテキストで行う版の実行時間を比べる
 #   使い方: bash scenarios/004-m4-test-time/run.sh [回数（既定 10）]
+REF="${REF:-article-004}"
 source "$(dirname "$0")/../lib/common.sh"
 N="${1:-10}"
 OUT="$ROOT/results/004/m4-test-time"; rm -rf "$OUT"; mkdir -p "$OUT"

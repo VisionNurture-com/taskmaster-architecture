@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.taskmaster.presentation.ProbeArchitectureTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-27T14:05:05.988Z" hostname="<host>" time="0.492">
+  <properties/>
+  <testcase name="presentationDoesNotUseInfrastructure" classname="com.example.taskmaster.presentation.ProbeArchitectureTest" time="0.492"/>
+  <system-out><![CDATA[2026-09-27T23:05:05.991+09:00  INFO 68330 --- [    Test worker] com.tngtech.archunit.core.PluginLoader   : Detected Java version 25.0.4
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

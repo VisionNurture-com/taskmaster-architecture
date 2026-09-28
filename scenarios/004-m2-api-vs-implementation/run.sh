@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # M2: application が domain を api で宣言するか implementation で宣言するかで、
 #     presentation のコンパイル時クラスパスに domain が現れるかを依存レポートで見る
+REF="${REF:-article-004}"
 source "$(dirname "$0")/../lib/common.sh"
 OUT="$ROOT/results/004/m2-api-vs-implementation"; rm -rf "$OUT"; mkdir -p "$OUT"
 record_env "$OUT/env.txt"
